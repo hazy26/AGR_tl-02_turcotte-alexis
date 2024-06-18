@@ -1,0 +1,125 @@
+<!-- - about: La page About Us devra contenir un texte citant quelques-unes de vos sources et ce que vous
+en avez compris. Au moins 250 mots -->
+<!doctype html>
+<html lang="en" class="box-border scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg" href="./assets/icons/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieClub</title>
+    <script type="module" src="./assets/js/main.js"></script>
+  </head>
+  <body class="bg-indigo-50 flex flex-col h-dvh">
+    <header class="bg-indigo-50 flex flex-col">
+      <div class="backdrop-blur border-b border-indigo-50 flex items-center justify-between p-6 max-w-screen-xl self-center w-dvw sticky top-0">
+        <div class="flex gap-8 lg:gap-12 items-center justify-center">
+          <i class="xl:hidden">
+            <img class="btn__nav cursor-pointer hover:scale-90 transition" src="./assets/icons/menu.svg" alt="Icon-menu">
+          </i>
+          <a href="./index.html">
+            <i>
+              <img class="scale-125 cursor-pointer hover:scale-100 transition" src="./assets/icons/logo.svg" alt="Logo">
+            </i>
+          </a>
+          <nav class="hidden dialog fixed top-24 left-0 bg-indigo-950/50 w-dvw h-dvh z-50">
+            <ul class="flex flex-col gap-12 lg:flex-row font-medium text-lg tracking-wide p-8 bg-indigo-50 text-indigo-950">
+              <li><a class="bg-indigo-950 text-indigo-50 p-2 hover:underline" href="./index.html">Accueil</a></li>
+              <li><a class="hover:underline" href="./products.html">Films & Séries</a></li>
+              <li><a class="hover:underline" href="./contact.html">Contact</a></li>
+              <li><a class="hover:underline" href="./about.html">À Propos</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="flex items-center justify-center">
+          <i>
+            <img class="cursor-pointer hover:scale-90 transition" src="./assets/icons/cart.svg" alt="Cart">
+          </i>
+          <div class="cart">
+            <!-- 
+              - affiche les articles du panier
+              - affiche le total general
+              - chaque ligne d'article inclus:
+                - image
+                - son nom
+                - la quantité
+                - le prix total (quantité * prix)
+                - btn pour retirer l'article
+            -->
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <main class="bg-indigo-950 flex flex-col gap-24 lg:gap-44 grow py-28 lg:py-32 px-6">
+
+    </main>
+    
+    <footer class="bg-indigo-50 flex flex-col md:grid md:grid-cols-2 gap-20 px-6 py-16 max-w-screen-xl self-center w-dvw z-5">
+      <div class="flex flex-col gap-20">
+        <a href="./index.html" class="self-center md:self-start">
+          <i>
+            <img class="scale-150 hover:scale-100 transition" src="./assets/icons/logo.svg" alt="Logo">
+          </i>
+        </a>
+        <nav class="text-indigo-500">
+          <ul class="flex flex-col gap-8 items-center md:items-start font-light md:text-xl tracking-wide">
+            <li><a class="hover:underline" href="./index.html">Accueil</a></li>
+            <li><a class="hover:underline" href="./products.html">Films & Séries</a></li>
+            <li><a class="hover:underline" href="./contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="./about.html">À Propos</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex flex-col gap-20 md:self-end">
+        <div class="flex flex-col gap-6 text-center md:text-right md:self-end text-indigo-500">
+          <p class="text-xl tracking-widest font-light">Nous Suivre</p>
+          <ul class="flex gap-8 self-center md:self-end">
+            <li>
+              <i>
+                <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/facebook.svg" alt="Logo Facebook.">
+              </i>
+            </li>
+  
+            <li>
+              <i>
+                <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/instagram.svg" alt="Logo Instagram.">
+              </i>
+            </li>
+  
+            <li>
+              <i>
+                <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/youtube.svg" alt="Logo Youtube.">  
+              </i>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="items-center md:items-end flex flex-col gap-2 font-light text-indigo-500">
+          <p class="font-light tracking-widest">S'inscrire à notre infolettre</p>
+          <input id="infolettre" class="bg-indigo-200 rounded-sm w-60" type="text">
+          <div class="flex flex-col">
+            <p class="hidden">Confirmation!</p>
+            <p class="hidden">Erreur</p>
+          </div>
+        </div>
+
+        <div class="text-center md:text-right font-thin tracking-wide flex flex-col gap-4 text-lg tracking-widest text-indigo-500">
+          <p>418-555-2626</p>
+          <p>compagnie@email.ca</p>
+          <div>
+            <p>245 rue de la Façade</p>
+            <p>Québec, Qc</p>
+            <p>G1L 3P2</p>
+          </div>
+        </div>
+  
+        <div class="text-center md:text-right flex flex-col md:flex-row md:self-end gap-2 md:gap-4 font-thin text-xs tracking-wider text-indigo-500">
+          <p>Alexis Turcotte</p>
+          <p>PMI, Cours d'interface</p>
+          <p><time datetime="2024-07-09">09 juillet 2024</time></p>
+        </div>  
+      </div>
+    </footer>
+  </body>
+</html>
