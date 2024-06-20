@@ -1,20 +1,16 @@
-<!-- - contact: La page Contact Us devra contenir un formulaire avec les champs suivants : prénom, nom,
-email, sujet et description. Après la soumission du formulaire, un message de confirmation sera
-affiché si l'email est valide, sinon un message d'erreur apparaîtra. Les champs devront être
-stylisés. -->
 <!doctype html>
 <html lang="en" class="box-border scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg" href="./assets/icons/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MovieClub</title>
+    <title>MovieClub - Contact</title>
     <script type="module" src="./assets/js/main.js"></script>
   </head>
   <body class="bg-indigo-50 flex flex-col h-dvh">
     <header class="bg-indigo-50 flex flex-col">
       <div class="backdrop-blur border-b border-indigo-50 flex items-center justify-between p-6 max-w-screen-xl self-center w-dvw sticky top-0">
-        <div class="flex gap-8 lg:gap-12 items-center justify-center">
+        <div class="flex gap-8 lg:gap-12 items-center justify-center relative">
           <i class="xl:hidden">
             <img class="btn__nav cursor-pointer hover:scale-90 transition" src="./assets/icons/menu.svg" alt="Icon-menu">
           </i>
@@ -23,11 +19,12 @@ stylisés. -->
               <img class="scale-125 cursor-pointer hover:scale-100 transition" src="./assets/icons/logo.svg" alt="Logo">
             </i>
           </a>
-          <nav class="hidden dialog fixed top-24 left-0 bg-indigo-950/50 w-dvw h-dvh z-50">
-            <ul class="flex flex-col gap-12 lg:flex-row font-medium text-lg tracking-wide p-8 bg-indigo-50 text-indigo-950">
-              <li><a class="bg-indigo-950 text-indigo-50 p-2 hover:underline" href="./index.html">Accueil</a></li>
+          <nav class="hidden dialog fixed top-24 left-0 bg-indigo-950/50 w-dvw h-dvh z-50 xl:flex xl:relative xl:bg-transparent xl:h-fit xl:w-fit xl:top-0">
+            <ul class="flex flex-col gap-12 lg:flex-row font-medium text-lg tracking-wide p-8 bg-indigo-50 text-indigo-500 xl:bg-transparent">
+              <li><a class="hover:underline" href="./index.html">Accueil</a></li>
               <li><a class="hover:underline" href="./products.html">Films & Séries</a></li>
-              <li><a class="hover:underline" href="./contact.html">Contact</a></li>
+              <li><a class="hover:underline" href="./abonnements.html">Abonnements</a></li>
+              <li><a class="bg-indigo-500 text-indigo-50 p-2 hover:underline" href="./contact.html">Contact</a></li>
               <li><a class="hover:underline" href="./about.html">À Propos</a></li>
             </ul>
           </nav>
@@ -53,7 +50,40 @@ stylisés. -->
     </header>
     
     <main class="bg-indigo-950 flex flex-col gap-24 lg:gap-44 grow py-28 lg:py-32 px-6">
+      <section class="flex flex-col gap-8 max-w-screen-md self-center bg-indigo-300 py-12 md:rounded-md w-dvw">
+        <h2 class="text-indigo-50 text-4xl tracking-wide bg-indigo-500 py-2 px-6 md:px-12 w-fit">Contact</h2>
+        <form action="" class="flex flex-col gap-8 p-6">
+          <fieldset class="grid grid-cols-2 gap-6">
+            <div class="flex flex-col gap-2 text-indigo-950">
+              <label class="flex flex-col font-medium tracking-wide text-lg" for="prenom">Prénom : </label>
+              <input class="bg-indigo-100 rounded-md" type="text" id="prenom">
+            </div>
+            
+            <div class="flex flex-col gap-2 text-indigo-950">
+              <label class="font-medium tracking-wide text-lg" for="nomfamille">Nom : </label>
+              <input class="bg-indigo-100 rounded-md" type="text" id="nomfamille">
+            </div>
+          </fieldset>
 
+          <fieldset class="flex flex-col gap-2 text-indigo-950">
+            <label class="font-medium tracking-wide text-lg" for="email">Email : </label>
+            <input class="bg-indigo-100 rounded-md" type="email" id="email">
+          </fieldset>
+
+          <fieldset class="flex flex-col gap-2 text-indigo-950">
+            <label class="font-medium tracking-wide text-lg" for="sujet">Sujet : </label>
+            <input class="bg-indigo-100 rounded-md" type="text" id="sujet">
+          </fieldset>
+          
+          <fieldset class="flex flex-col gap-2 text-indigo-950 pb-8">
+            <label class="font-medium tracking-wide text-lg" for="description" id="description__label">Description: </label>
+            <textarea class="bg-indigo-100 rounded-md" name="" id="description__textarea"></textarea>
+          </fieldset>
+          
+          <button class="bg-indigo-800 text-indigo-50 px-6 py-2 w-fit self-center rounded-3xl tracking-wider font-light">Soumettre</button>
+          <!-- Message de confirmation si l'email est valide, sinon message d'erreur. -->
+        </form>
+      </section>
     </main>
     
     <footer class="bg-indigo-50 flex flex-col md:grid md:grid-cols-2 gap-20 px-6 py-16 max-w-screen-xl self-center w-dvw z-5">
@@ -67,6 +97,7 @@ stylisés. -->
           <ul class="flex flex-col gap-8 items-center md:items-start font-light md:text-xl tracking-wide">
             <li><a class="hover:underline" href="./index.html">Accueil</a></li>
             <li><a class="hover:underline" href="./products.html">Films & Séries</a></li>
+            <li><a class="hover:underline" href="./abonnements.html">Abonnements</a></li>
             <li><a class="hover:underline" href="./contact.html">Contact</a></li>
             <li><a class="hover:underline" href="./about.html">À Propos</a></li>
           </ul>
@@ -78,21 +109,27 @@ stylisés. -->
           <p class="text-xl tracking-widest font-light">Nous Suivre</p>
           <ul class="flex gap-8 self-center md:self-end">
             <li>
-              <i>
-                <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/facebook.svg" alt="Logo Facebook.">
-              </i>
+              <a href="https://www.facebook.com/?locale=fr_CA" target="_blank">
+                <i>
+                  <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/facebook.svg" alt="Logo Facebook.">
+                </i>
+              </a>
             </li>
   
             <li>
-              <i>
-                <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/instagram.svg" alt="Logo Instagram.">
-              </i>
+              <a href="https://www.instagram.com/" target="_blank">
+                <i>
+                  <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/instagram.svg" alt="Logo Instagram.">
+                </i>
+              </a>
             </li>
   
             <li>
-              <i>
-                <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/youtube.svg" alt="Logo Youtube.">  
-              </i>
+              <a href="https://www.youtube.com/?gl=CA" target="_blank">
+                <i>
+                  <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/youtube.svg" alt="Logo Youtube.">  
+                </i>
+              </a>
             </li>
           </ul>
         </div>

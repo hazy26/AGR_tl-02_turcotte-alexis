@@ -1,60 +1,74 @@
-<!-- - produits: La page produits devra contenir au moins 9 produits. Un champ de recherche permettra de
-filtrer ces produits. Lorsque vous cliquerez sur une carte de produit, un modal affichant les
-détails du produit s'ouvrira. Chaque produit devra avoir un bouton "Add to cart" permettant de
-l'ajouter au panier.
- -->
  <!doctype html>
  <html lang="en" class="box-border scroll-smooth">
    <head>
      <meta charset="UTF-8" />
      <link rel="icon" type="image/svg" href="./assets/icons/logo.svg" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>MovieClub</title>
+     <title>MovieClub - Films & Séries</title>
      <script type="module" src="./assets/js/main.js"></script>
    </head>
    <body class="bg-indigo-50 flex flex-col h-dvh">
      <header class="bg-indigo-50 flex flex-col">
-       <div class="backdrop-blur border-b border-indigo-50 flex items-center justify-between p-6 max-w-screen-xl self-center w-dvw sticky top-0">
-         <div class="flex gap-8 lg:gap-12 items-center justify-center">
-           <i class="xl:hidden">
-             <img class="btn__nav cursor-pointer hover:scale-90 transition" src="./assets/icons/menu.svg" alt="Icon-menu">
-           </i>
-           <a href="./index.html">
-             <i>
-               <img class="scale-125 cursor-pointer hover:scale-100 transition" src="./assets/icons/logo.svg" alt="Logo">
-             </i>
-           </a>
-           <nav class="hidden dialog fixed top-24 left-0 bg-indigo-950/50 w-dvw h-dvh z-50">
-             <ul class="flex flex-col gap-12 lg:flex-row font-medium text-lg tracking-wide p-8 bg-indigo-50 text-indigo-950">
-               <li><a class="bg-indigo-950 text-indigo-50 p-2 hover:underline" href="./index.html">Accueil</a></li>
-               <li><a class="hover:underline" href="./products.html">Films & Séries</a></li>
-               <li><a class="hover:underline" href="./contact.html">Contact</a></li>
-               <li><a class="hover:underline" href="./about.html">À Propos</a></li>
-             </ul>
-           </nav>
-         </div>
-         <div class="flex items-center justify-center">
-           <i>
-             <img class="cursor-pointer hover:scale-90 transition" src="./assets/icons/cart.svg" alt="Cart">
-           </i>
-           <div class="cart">
-             <!-- 
-               - affiche les articles du panier
-               - affiche le total general
-               - chaque ligne d'article inclus:
-                 - image
-                 - son nom
-                 - la quantité
-                 - le prix total (quantité * prix)
-                 - btn pour retirer l'article
-             -->
-           </div>
-         </div>
-       </div>
+      <div class="backdrop-blur border-b border-indigo-50 flex items-center justify-between p-6 max-w-screen-xl self-center w-dvw sticky top-0">
+        <div class="flex gap-8 lg:gap-12 items-center justify-center relative">
+          <i class="xl:hidden">
+            <img class="btn__nav cursor-pointer hover:scale-90 transition" src="./assets/icons/menu.svg" alt="Icon-menu">
+          </i>
+          <a href="./index.html">
+            <i>
+              <img class="scale-125 cursor-pointer hover:scale-100 transition" src="./assets/icons/logo.svg" alt="Logo">
+            </i>
+          </a>
+          <nav class="hidden dialog fixed top-24 left-0 bg-indigo-950/50 w-dvw h-dvh z-50 xl:flex xl:relative xl:bg-transparent xl:h-fit xl:w-fit xl:top-0">
+            <ul class="flex flex-col gap-12 lg:flex-row font-medium text-lg tracking-wide p-8 bg-indigo-50 text-indigo-500 xl:bg-transparent">
+              <li><a class="hover:underline" href="./index.html">Accueil</a></li>
+              <li><a class="bg-indigo-500 text-indigo-50 p-2 hover:underline" href="./products.html">Films & Séries</a></li>
+              <li><a class="hover:underline" href="./abonnements.html">Abonnements</a></li>
+              <li><a class="hover:underline" href="./contact.html">Contact</a></li>
+              <li><a class="hover:underline" href="./about.html">À Propos</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="flex items-center justify-center">
+          <i>
+            <img class="cursor-pointer hover:scale-90 transition" src="./assets/icons/cart.svg" alt="Cart">
+          </i>
+          <div class="cart">
+            <!-- 
+              - affiche les articles du panier
+              - affiche le total general
+              - chaque ligne d'article inclus:
+                - image
+                - son nom
+                - la quantité
+                - le prix total (quantité * prix)
+                - btn pour retirer l'article
+            -->
+          </div>
+        </div>
+      </div>
      </header>
      
      <main class="bg-indigo-950 flex flex-col gap-24 lg:gap-44 grow py-28 lg:py-32 px-6">
- 
+
+        <!-- champ de recherche -->
+         <div>
+          <button>Rechercher</button>
+          <input type="text">
+         </div>
+
+        <!-- 6 films / 6 series -->
+        <section>
+          <h2>Titre de film</h2>
+          <img src="#" alt="Movier Cover">
+          <button>+ Add to cart</button>
+
+          <!-- S'affiche lorqu'on clique sur un produit -->
+          <div class="modal hidden">
+            <!-- details du produits -->
+          </div>
+
+        </section>
      </main>
      
      <footer class="bg-indigo-50 flex flex-col md:grid md:grid-cols-2 gap-20 px-6 py-16 max-w-screen-xl self-center w-dvw z-5">
@@ -68,6 +82,7 @@ l'ajouter au panier.
            <ul class="flex flex-col gap-8 items-center md:items-start font-light md:text-xl tracking-wide">
              <li><a class="hover:underline" href="./index.html">Accueil</a></li>
              <li><a class="hover:underline" href="./products.html">Films & Séries</a></li>
+             <li><a class="hover:underline" href="./abonnements.html">Abonnements</a></li>
              <li><a class="hover:underline" href="./contact.html">Contact</a></li>
              <li><a class="hover:underline" href="./about.html">À Propos</a></li>
            </ul>
@@ -78,24 +93,30 @@ l'ajouter au panier.
          <div class="flex flex-col gap-6 text-center md:text-right md:self-end text-indigo-500">
            <p class="text-xl tracking-widest font-light">Nous Suivre</p>
            <ul class="flex gap-8 self-center md:self-end">
-             <li>
-               <i>
-                 <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/facebook.svg" alt="Logo Facebook.">
-               </i>
-             </li>
-   
-             <li>
-               <i>
-                 <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/instagram.svg" alt="Logo Instagram.">
-               </i>
-             </li>
-   
-             <li>
-               <i>
-                 <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/youtube.svg" alt="Logo Youtube.">  
-               </i>
-             </li>
-           </ul>
+            <li>
+              <a href="https://www.facebook.com/?locale=fr_CA" target="_blank">
+                <i>
+                  <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/facebook.svg" alt="Logo Facebook.">
+                </i>
+              </a>
+            </li>
+  
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">
+                <i>
+                  <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/instagram.svg" alt="Logo Instagram.">
+                </i>
+              </a>
+            </li>
+  
+            <li>
+              <a href="https://www.youtube.com/?gl=CA" target="_blank">
+                <i>
+                  <img class="w-12 cursor-pointer transition hover:scale-90" src="./assets/icons/youtube.svg" alt="Logo Youtube.">  
+                </i>
+              </a>
+            </li>
+          </ul>
          </div>
    
          <div class="items-center md:items-end flex flex-col gap-2 font-light text-indigo-500">
