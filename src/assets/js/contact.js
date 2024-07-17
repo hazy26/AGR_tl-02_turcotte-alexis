@@ -11,11 +11,6 @@ const msgValidation = document.querySelector('.validation__msg');
 /**
 * @type {HTMLElement}
 */
-const submitBtn = document.querySelector('.btn__submit');
-
-/**
-* @type {HTMLElement}
-*/
 const formulaire = document.querySelector('.formulaire__contact');
 
 formulaire.addEventListener('submit', (e) => {
