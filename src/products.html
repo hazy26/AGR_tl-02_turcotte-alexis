@@ -31,28 +31,34 @@
       </div>
       <div class="flex items-center justify-center">
         <i>
-          <img class="cursor-pointer hover:scale-90 transition" src="./assets/icons/cart.svg" alt="Cart">
+          <img class="cursor-pointer hover:scale-90 transition openCart" src="./assets/icons/cart.svg" alt="Cart">
         </i>
-        <div class="cart">
-          <!-- 
-            - affiche les articles du panier
-            - affiche le total general
-            - chaque ligne d'article inclus:
-              - image
-              - son nom
-              - la quantité
-              - le prix total (quantité * prix)
-              - btn pour retirer l'article
-          -->
-        </div>
+
       </div>
+    </div>
+    <div class="cart z-50 bg-indigo-950/75 w-full h-dvh absolute top-0 right-0 hidden">
+      <div class="h-dvh bg-white absolute top-0 right-0 p-12">
+        <div class="flex flex-col gap-3 justify-end h-full">
+          <button class="bg-indigo-50 border border-indigo-500 text-indigo-500 px-8 py-2 tracking-wide font-light rounded-3xl text-normal self-center hover:shadow-lg hover:scale-90 transition">Modifier</button>
+          <button class="bg-indigo-950 border border-indigo-950 text-indigo-50 px-8 py-2 tracking-wide font-light rounded-3xl text-normal self-center hover:shadow-lg hover:scale-90 transition">Checkout</button>  
+        </div>
+        </div>
+    </div>
+
+    <div class="cart z-50 bg-indigo-950/75 w-full h-dvh absolute top-0 right-0 hidden">
+      <div class="h-dvh bg-white absolute top-0 right-0 p-12">
+        <div class="flex flex-col gap-3 justify-end h-full">
+          <button class="bg-indigo-50 border border-indigo-500 text-indigo-500 px-8 py-2 tracking-wide font-light rounded-3xl text-normal self-center hover:shadow-lg hover:scale-90 transition">Modifier</button>
+          <button class="bg-indigo-950 border border-indigo-950 text-indigo-50 px-8 py-2 tracking-wide font-light rounded-3xl text-normal self-center hover:shadow-lg hover:scale-90 transition">Checkout</button>  
+        </div>
+        </div>
     </div>
     </header>
     
     <main class="bg-indigo-950 flex flex-col gap-24 lg:gap-30 grow py-28 lg:py-32 px-6">
         <div class="flex flex-col gap-2 items-start max-w-screen-lg relative self-center w-full">
         <button class="self-center absolute right-0 bg-indigo-300 text-indigo-950 tracking-wide py-2 px-4 rounded-r-3xl">Rechercher</button>
-        <input class="self-center p-2 w-full rounded-3xl" type="text">
+        <input class="self-center p-2 w-full rounded-3xl search__input" type="text">
         </div>
 
         <div class="flex flex-col gap-8 items-center max-w-screen-lg self-center">

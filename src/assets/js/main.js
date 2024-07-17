@@ -1,5 +1,5 @@
 import '../css/style.css'
+import './contact.js'
+import './medias.js'
 import './dialog.js'
-import './infolettre.js'
-import './films.js'
-import './series.js'
+import './search.js'

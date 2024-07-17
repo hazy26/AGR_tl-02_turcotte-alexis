@@ -31,22 +31,18 @@
        </div>
        <div class="flex items-center justify-center">
          <i>
-           <img class="cursor-pointer hover:scale-90 transition" src="./assets/icons/cart.svg" alt="Cart">
+           <img class="cursor-pointer hover:scale-90 transition openCart" src="./assets/icons/cart.svg" alt="Cart">
          </i>
-         <div class="cart">
-           <!-- 
-             - affiche les articles du panier
-             - affiche le total general
-             - chaque ligne d'article inclus:
-               - image
-               - son nom
-               - la quantité
-               - le prix total (quantité * prix)
-               - btn pour retirer l'article
-           -->
-         </div>
        </div>
      </div>
+     <div class="cart z-50 bg-indigo-950/75 w-full h-dvh absolute top-0 right-0 hidden">
+      <div class="h-dvh bg-white absolute top-0 right-0 p-12">
+        <div class="flex flex-col gap-3 justify-end h-full">
+          <button class="bg-indigo-50 border border-indigo-500 text-indigo-500 px-8 py-2 tracking-wide font-light rounded-3xl text-normal self-center hover:shadow-lg hover:scale-90 transition">Modifier</button>
+          <button class="bg-indigo-950 border border-indigo-950 text-indigo-50 px-8 py-2 tracking-wide font-light rounded-3xl text-normal self-center hover:shadow-lg hover:scale-90 transition">Checkout</button>  
+        </div>
+        </div>
+    </div>
     </header>
     
     <main class="bg-indigo-950 flex flex-col grow py-28 lg:py-32 px-6">

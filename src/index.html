@@ -8,6 +8,7 @@
     <script type="module" src="./assets/js/main.js"></script>
   </head>
   <body class="bg-indigo-50 flex flex-col h-dvh">
+    
     <header class="bg-indigo-50 flex flex-col z-20">
       <div class="backdrop-blur border-b border-indigo-50 flex items-center justify-between p-6 max-w-screen-xl self-center w-dvw sticky top-0">
         <div class="flex gap-8 lg:gap-12 items-center justify-center relative">
@@ -19,7 +20,7 @@
               <img class="scale-125 cursor-pointer hover:scale-100 transition" src="./assets/icons/logo.svg" alt="Logo">
             </i>
           </a>
-          <nav class="hidden dialog fixed top-20 left-0 bg-indigo-950/50 w-dvw h-dvh z-50 xl:flex xl:relative xl:bg-transparent xl:h-fit xl:w-fit xl:top-0">
+          <nav class="hidden dialog fixed top-20 left-0 bg-indigo-950/50 w-dvw h-dvh z-40 xl:flex xl:relative xl:bg-transparent xl:h-fit xl:w-fit xl:top-0">
             <ul class="flex flex-col gap-12 lg:flex-row font-medium text-lg tracking-wide p-8 bg-indigo-50 text-indigo-500 xl:bg-transparent">
               <li><a class="bg-indigo-500 text-indigo-50 p-2 hover:underline" href="./index.html">Accueil</a></li>
               <li><a class="hover:underline" href="products.html">Films & Séries</a></li>
@@ -30,21 +31,9 @@
           </nav>
         </div>
         <div class="flex items-center justify-center">
-          <i>
-            <img class="cursor-pointer hover:scale-90 transition" src="./assets/icons/cart.svg" alt="Cart">
+          <i class="openCart">
+            <img class="cursor-pointer hover:scale-90 transition " src="./assets/icons/cart.svg" alt="Cart button.">
           </i>
-          <div class="cart">
-            <!-- 
-              - affiche les articles du panier
-              - affiche le total general
-              - chaque ligne d'article inclus:
-                - image
-                - son nom
-                - la quantité
-                - le prix total (quantité * prix)
-                - btn pour retirer l'article
-            -->
-          </div>
         </div>
       </div>
       <div class="flex flex-col md:flex-row items-center justify-between max-w-screen-lg self-center w-dvw px-16">
@@ -64,9 +53,17 @@
           </div>
         </div>
       </div>
+      <div class="cart z-50 bg-indigo-950/75 w-full h-dvh absolute top-0 right-0 hidden">
+        <div class="h-dvh bg-white absolute top-0 right-0 p-12">
+          <div class="flex flex-col gap-3 justify-end h-full">
+            <button class="bg-indigo-50 border border-indigo-500 text-indigo-500 px-8 py-2 tracking-wide font-light rounded-3xl text-normal self-center hover:shadow-lg hover:scale-90 transition">Modifier</button>
+            <button class="bg-indigo-950 border border-indigo-950 text-indigo-50 px-8 py-2 tracking-wide font-light rounded-3xl text-normal self-center hover:shadow-lg hover:scale-90 transition">Checkout</button>  
+          </div>
+          </div>
+      </div>
     </header>
     
-    <main class="bg-indigo-950 flex flex-col gap-24 lg:gap-44 grow py-28 lg:py-32 px-6 z-20">
+    <main class="bg-indigo-950 flex flex-col gap-24 lg:gap-44 grow py-28 lg:py-32 px-6 z-10">
       <section class="flex flex-col gap-10 w-full self-center max-w-screen-lg">
         <h2 class="font-semibold text-3xl tracking-wide self-center text-indigo-100">Nos avantages</h2>
         <ul class="grid gap-8 md:gap-16 lg:gap-24 sm:grid-cols-3 self-center">
