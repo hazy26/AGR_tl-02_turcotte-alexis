@@ -11,13 +11,27 @@ const msgValidation = document.querySelector('.validation__msg');
 /**
 * @type {HTMLElement}
 */
-const msgEnterEmail = document.querySelector('.enterEmail__msg');
+const submitBtn = document.querySelector('.btn__submit');
 
 /**
 * @type {HTMLElement}
 */
-const submitBtn = document.querySelector('.btn__submit');
+const formulaire = document.querySelector('.formulaire__contact');
 
-/* 
-    code de validation
-*/
+formulaire.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    /**
+    * @type {HTMLElement}
+    */
+    const email = document.querySelector('#email');
+
+    if(email.value.includes('@')){
+        msgValidation.classList.remove('hidden');
+        msgErreur.classList.add('hidden');
+        this.submit;
+    } else{
+        msgErreur.classList.remove('hidden');
+        msgValidation.classList.add('hidden');
+    }
+})
