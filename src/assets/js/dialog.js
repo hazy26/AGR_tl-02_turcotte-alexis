@@ -1,5 +1,6 @@
+// pas la bonne methode pour renseigner un array
 /**
- * @type {[HTMLElement]}
+ * @type {HTMLElement[]}
  */
 const nav = document.querySelectorAll('nav');
 nav.forEach(nav => {
@@ -25,7 +26,7 @@ openCart.addEventListener('click', () => {
 });
 
 /**
- * @type {[HTMLElement]}
+ * @type {HTMLElement[]}
  */
 const carts = document.querySelectorAll('.cart');
 carts.forEach(cart => {

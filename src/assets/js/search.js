@@ -20,15 +20,14 @@ function search(){
      */
     const searchInput = document.querySelector('.search__input');
 
+    // pas la bonne methode pour renseigner un array
     /**
-     * @type {[HTMLElement]}
+     * @type {HTMLElement[]}
      */
     const medias = document.querySelectorAll('.media');
 
 
-    /**
-     * @type {Event}
-     */
+    //Que sommes nous en train de typer ici? -0.5
     searchInput.addEventListener('input', () => {
         
         /**

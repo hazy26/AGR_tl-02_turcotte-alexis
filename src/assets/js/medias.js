@@ -1,10 +1,12 @@
+//wrong type -0.5
 /**
- * @type {HTMLElement}
+ * @type {string}
  */
 const url = window.location.href;
 
+//wrong type -0.5
 /**
- * @type {HTMLElement}
+ * @type {string}
  */
 const products = 'products.html';
 
@@ -79,8 +81,9 @@ function medias(){
         };
     };
     
+    // pas la bonne methode pour renseigner un array -0.5
     /**
-    * @type {[Media]}
+    * @type {Media[]}
     */
     const films = [
         new Media(
@@ -130,7 +133,7 @@ function medias(){
     });
 
     /**
-    * @type {[Media]}
+    * @type {Media[]}
     */
     const series = [
         new Media(
